@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry
-      uses: liskl/actions-docker-publish@master
+      uses: liskl/actions-docker-publish@main
       with:
         name: docker.pkg.github.com/liskl/actions-docker-publish/publish-docker-github-action
         username: ${{ github.actor }}

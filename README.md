@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry
-      uses: liskl/actions-docker-publish@master
+      uses: liskl/actions-docker-publish@main
       with:
         name: myDocker/repository
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -123,7 +123,7 @@ All `buildargs` will be masked, so that they don't appear in the logs.
 
 ```yaml
 - name: Publish to Registry
-  uses: liskl/actions-docker-publish@master
+  uses: liskl/actions-docker-publish@main
   env:
     MY_FIRST: variableContent
     MY_SECOND: variableContent
@@ -139,7 +139,7 @@ Use `buildoptions` when you want to configure [options](https://docs.docker.com/
 
 ```yaml
 - name: Publish to Registry
-  uses: liskl/actions-docker-publish@master
+  uses: liskl/actions-docker-publish@main
   with:
     name: myDocker/repository
     username: ${{ secrets.DOCKER_USERNAME }}
@@ -165,7 +165,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry
-      uses: liskl/actions-docker-publish@master
+      uses: liskl/actions-docker-publish@main
       with:
         name: myDocker/repository
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -195,7 +195,7 @@ Use `tags` when you want to bring your own tags (separated by comma).
 
 ```yaml
 - name: Publish to Registry
-  uses: liskl/actions-docker-publish@master
+  uses: liskl/actions-docker-publish@main
   with:
     name: myDocker/repository
     username: ${{ secrets.DOCKER_USERNAME }}
@@ -225,7 +225,7 @@ jobs:
       id: get_version
       run: echo ::set-env name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
     - name: Publish to Registry
-      uses: liskl/actions-docker-publish@master
+      uses: liskl/actions-docker-publish@main
       with:
         name: myDocker/repository
         username: ${{ secrets.DOCKER_USERNAME }}
